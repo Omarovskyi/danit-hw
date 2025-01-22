@@ -12,24 +12,6 @@ Status Code: 200
     "first_name": "Jimmy",
     "id": "3",
     "last_name": "Beam"
-  },
-  {
-    "age": "20",
-    "first_name": "John",
-    "id": "4",
-    "last_name": "Doe"
-  },
-  {
-    "age": "22",
-    "first_name": "Jane",
-    "id": "5",
-    "last_name": "Smith"
-  },
-  {
-    "age": "23",
-    "first_name": "Jim",
-    "id": "6",
-    "last_name": "Beam"
   }
 ]
 
