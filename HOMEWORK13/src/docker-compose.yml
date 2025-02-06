@@ -1,0 +1,8 @@
+services:
+  app:
+    image: students:1.0
+    container_name: name-my
+    ports:
+      - "8000:8000"
+    volumes:
+    - ./students.csv:/app/students.csv
