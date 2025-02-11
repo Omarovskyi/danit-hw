@@ -1,0 +1,20 @@
+services:
+  app:
+    image: students:1.0
+    container_name: name-my
+    ports:
+      - "8000:8000"
+    volumes:
+    - ./students.csv:/app/students.csv
+    expose:
+      - "8000"
+
+  nginx:
+    image: nginx:latest
+    container_name: nginx_proxy
+    depends_on:
+      - app
+    ports:
+      - "8081:80"
+    volumes:
+      - ./nginx/conf.d/default.conf:/etc/nginx/conf.d/default.conf
