@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: python-random-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: python-random
+  template:
+    metadata:
+      labels:
+        app: python-random
+    spec:
+      containers:
+        - name: python-random
+          image: omarovskyi/24-app:latest
+          ports:
+            - containerPort: 8082
+      imagePullSecrets:
+        - name: dockerhub-secret
